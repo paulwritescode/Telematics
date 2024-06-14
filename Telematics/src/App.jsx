@@ -1,7 +1,18 @@
 import React from "react";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 
-function App() {
-  return <div className="bg-red-400">Telematics app this ones here </div>;
-}
+// import pages
+import HomePage from "./components/contents/HomePage";
+import Pages from "./layout/pages";
 
-export default App;
+export const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Pages />}>
+      <Route index element={<HomePage />} />
+    </Route>
+  )
+);
