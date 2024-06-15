@@ -1,17 +1,17 @@
 import React from "react";
 
 // sections
+import BrandName from "../brand/brandName";
+import SideBar from "../sections/sidebar/sideBar";
 import UserProfile from "../sections/userProfile/UserProfile";
 
 function HomePage() {
   return (
     <>
-      <div className="flex flex-col items-start justify-between h-screen">
-        <h1>HomePage</h1>
-
-        <div className="flex flex-col items-start bg-red-500">
-          <UserProfile />
-        </div>
+      <div className="flex flex-col items-start justify-between h-screen ">
+        <BrandName />
+        <SideBar />
+        <UserProfile />
       </div>
     </>
   );
@@ -19,9 +19,8 @@ function HomePage() {
 
 export default HomePage;
 
-// imort the logo here
-// import the user profile here
+// imort the logo here (brandname) Done
+// import the user profile here Done
 // import the sidebar here
 // import the navbar here
-
 // create all these above items

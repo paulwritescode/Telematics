@@ -1,7 +1,7 @@
 import React from "react";
 
-function brandName() {
-  return <div>Fleet</div>;
+function BrandName() {
+  return <div>Fleet@logo</div>;
 }
 
-export default brandName;
+export default BrandName;

@@ -4,7 +4,9 @@ import { Outlet } from "react-router-dom";
 function Pages() {
   return (
     <>
-      <Outlet />
+      <div className="p-2">
+        <Outlet />
+      </div>
     </>
   );
 }
