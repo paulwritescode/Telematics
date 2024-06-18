@@ -7,12 +7,15 @@ import {
 
 // import pages
 import HomePage from "./components/contents/HomePage";
+import Vehicles from "./components/sections/sidebar/components/Vehicles";
 import Pages from "./layout/pages";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Pages />}>
-      <Route index element={<HomePage />} />
+    <Route element={<Pages />}>
+      <Route path="/" element={<HomePage />}>
+        <Route path="vehicle" element={<Vehicles />} />
+      </Route>
     </Route>
   )
 );
