@@ -8,7 +8,7 @@ import UserProfile from "../userProfile/UserProfile";
 function SideBar() {
   return (
     <>
-      <div className="h-screen p-2 w-[250px] bg-white  flex justify-between flex-col">
+      <div className="h-screen p-2 w-[250px] bg-white border flex justify-between flex-col">
         <div className="flex flex-col space-y-1">
           <Link
             className="flex items-center px-3 py-2 text-sm rounded-md bg-slate-100"
