@@ -13,8 +13,8 @@ function Vehicles() {
 
   return (
     <>
-      <div className="flex w-full space-x-1 ">
-        <div className="h-screen p-4 w-[300px] bg-white rounded-md  border flex flex-col space-y-1">
+      <div className="flex w-full space-x-1 bg-white/60 ">
+        <div className="h-screen p-4 w-[300px] rounded-md  border flex flex-col space-y-1">
           {vehicles.map((vehicle, index) => (
             <Link
               to={`precisevehicle/${vehicle.plate}`}
