@@ -4,20 +4,19 @@ import { Outlet } from "react-router-dom";
 // sections
 import BrandName from "../brand/brandName";
 import SideBar from "../sections/sidebar/sideBar";
-import UserProfile from "../sections/userProfile/UserProfile";
 
 function HomePage() {
   return (
     <>
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col w-full space-y-2 ">
         <div>
           <BrandName />
         </div>
-        <div className="flex space-x-1">
+        <div className="flex w-full space-x-1 ">
           <div className="flex flex-col items-start justify-between h-screen ">
             <SideBar />
           </div>
-          <div>
+          <div className="w-full">
             <Outlet />
           </div>
         </div>

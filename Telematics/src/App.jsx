@@ -16,7 +16,7 @@ export const router = createBrowserRouter(
     <Route element={<Pages />}>
       <Route path="/" element={<HomePage />}>
         <Route path="vehicle" element={<Vehicles />}>
-          <Route path="precisevehicle/" element={<PreciseVehicle />} />
+          <Route path="precisevehicle/:plate" element={<PreciseVehicle />} />
         </Route>
       </Route>
     </Route>

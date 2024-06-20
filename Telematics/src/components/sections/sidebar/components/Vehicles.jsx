@@ -1,30 +1,10 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import { getDummyVehicle } from "../../../dummyInfo/DummyVehicles";
 
 function Vehicles() {
-  const vehicles = [
-    // Use lowercase 'vehicles' for consistency
-    {
-      plate: "KBD45D",
-      milage: 34500,
-    },
-    {
-      plate: "KAA65R",
-      milage: 3453430,
-    },
-    {
-      plate: "KZZ90D",
-      milage: 12000,
-    },
-    {
-      plate: "KQR123D",
-      milage: 10,
-    },
-    {
-      plate: "ABC234D",
-      milage: 1700,
-    },
-  ];
+  const vehicles = getDummyVehicle();
+  console.log("@manqiqode:#1:Vehicles_Data", vehicles);
 
   // Function to format mileage for better readability
   const formatMileage = (milage) => {
@@ -33,11 +13,11 @@ function Vehicles() {
 
   return (
     <>
-      <div className="flex space-x-1">
+      <div className="flex w-full space-x-1 ">
         <div className="h-screen p-4 w-[300px] bg-white border flex flex-col space-y-1">
           {vehicles.map((vehicle, index) => (
             <Link
-              to={"precisevehicle"}
+              to={`precisevehicle/${vehicle.plate}`}
               key={vehicle.plate} // Unique key for each vehicle
               className="flex px-2 py-1 space-x-2 text-sm rounded-md hover:bg-slate-200 bg-slate-100"
             >
@@ -54,7 +34,7 @@ function Vehicles() {
             </Link>
           ))}
         </div>
-        <div>
+        <div className="w-full">
           <Outlet />
         </div>
       </div>
