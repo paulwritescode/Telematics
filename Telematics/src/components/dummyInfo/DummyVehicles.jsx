@@ -7,6 +7,7 @@ const vehicles = [
     brand: "Toyota Hilux",
     destination_from: "Kigali",
     destination_to: "Mbabane",
+    status: "active",
   },
   {
     plate: "KAA65R",
@@ -16,6 +17,7 @@ const vehicles = [
     brand: "Ford Ranger",
     destination_from: "Nairobi",
     destination_to: "Nyeri",
+    status: "active",
   },
   {
     plate: "KZZ90D",
@@ -25,6 +27,7 @@ const vehicles = [
     brand: "Isuzu",
     destination_from: "Kigali",
     destination_to: "Arusha",
+    status: "inactive",
   },
   {
     plate: "KQR123D",
@@ -34,6 +37,7 @@ const vehicles = [
     brand: "Jeep",
     destination_from: "Mombasa",
     destination_to: "Mbabane",
+    status: "inactive",
   },
   {
     plate: "ABC234D",
@@ -43,6 +47,7 @@ const vehicles = [
     brand: "Harrier",
     destination_from: "Nairobi",
     destination_to: "Mbabane",
+    status: "inactive",
   },
 ];
 
