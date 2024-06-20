@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"; // Import for useEffect
 import { useParams } from "react-router-dom";
 
+import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
 import { getDummyVehicle } from "../../../dummyInfo/DummyVehicles";
 import filteredVhicleByPlate from "../../../dummyInfo/FilterCarInfo";
-import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
 
 export default function PreciseVehicle() {
   const { plate } = useParams();
@@ -36,8 +36,8 @@ export default function PreciseVehicle() {
           <span className="flex pb-2 space-x-3 text-xs border-b">
             <span className="font-bold capitalize">{vehicleData.driver}</span>
 
-            <span>
-              <DevicePhoneMobileIcon className="w-6 h-6 text-gray-500" />0
+            <span className="flex ">
+              <DevicePhoneMobileIcon className="w-4 h-4 mr-1 text-blue-500" />0
               {vehicleData.Phone}{" "}
             </span>
           </span>

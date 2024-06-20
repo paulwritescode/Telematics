@@ -14,18 +14,18 @@ function Vehicles() {
   return (
     <>
       <div className="flex w-full space-x-1 ">
-        <div className="h-screen p-4 w-[300px] bg-white border flex flex-col space-y-1">
+        <div className="h-screen p-4 w-[300px] bg-white rounded-md  border flex flex-col space-y-1">
           {vehicles.map((vehicle, index) => (
             <Link
               to={`precisevehicle/${vehicle.plate}`}
               key={vehicle.plate} // Unique key for each vehicle
-              className="flex px-2 py-1 space-x-2 text-sm rounded-md hover:bg-slate-200 bg-slate-100"
+              className="flex px-2 py-1 space-x-2 text-sm rounded-md hover:bg-slate-200 bg-neutral-200"
             >
               <span className="text-slate-500">{index + 1} </span>
               <div className="flex flex-col ">
                 <span className="flex space-x-2 text-xs text-slate-500">
                   <span className="font-bold">{vehicle.plate}</span>{" "}
-                  <span className="text-green-500">active</span>
+                  <span className="lowercase "> {vehicle.driver} </span>
                 </span>
                 <span className="text-base font-bold text-slate-700">
                   {formatMileage(vehicle.milage)}KM

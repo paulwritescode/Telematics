@@ -41,7 +41,7 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 export default function BadgeAvatars() {
   return (
     <>
-      <div className="flex items-center px-4 py-2 space-x-3 text-base scale-75 rounded-full bg-slate-200 w-max">
+      <div className="flex items-center px-4 py-2 space-x-3 text-base scale-75 rounded-full w-max">
         <div className="flex">
           <StyledBadge
             overlap="circular"
