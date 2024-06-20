@@ -47,7 +47,7 @@ const vehicles = [
     brand: "Harrier",
     destination_from: "Nairobi",
     destination_to: "Mbabane",
-    status: "inactive",
+    status: "active",
   },
 ];
 

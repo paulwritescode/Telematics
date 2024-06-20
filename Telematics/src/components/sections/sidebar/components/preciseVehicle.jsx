@@ -140,7 +140,20 @@ export default function PreciseVehicle() {
             </span>
           </div>
           <div className="flex flex-col p-4 bg-white rounded-lg shadow-md w-max">
-            <span className="text-sm font-bold">Google map</span>
+            <span className="text-sm font-bold">
+              Google map
+              <div>
+                <iframe
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+    &q=Space+Needle,Seattle+WA"
+                ></iframe>
+              </div>
+            </span>
           </div>
         </div>
       ) : (

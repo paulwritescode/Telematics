@@ -18,7 +18,7 @@ function SideBar() {
 
   return (
     <>
-      <div className="h-screen  w-[250px] flex justify-between flex-col p-4">
+      <div className="h-screen w-[250px] flex justify-between flex-col p-4">
         <div className="flex flex-col space-y-1">
           <Link
             to="dashboard" // Assuming "vehicle" is the correct route
