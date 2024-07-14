@@ -54,7 +54,7 @@ function Vehicles() {
 
   return (
     <>
-      <div className="flex w-full space-x-1 rounded-lg bg-white/60">
+      <div className="flex w-full space-x-1 rounded-lg bg-white/40">
         <div className=" p-4 w-[300px] rounded-md border   flex flex-col space-y-1">
           <div className="flex items-center justify-between p-1 mb-2 rounded-3xl bg-neutral-200">
             <MagnifyingGlassIcon className="w-5 h-5 ml-1 text-blue-600" />

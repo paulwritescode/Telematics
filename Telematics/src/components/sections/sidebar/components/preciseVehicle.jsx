@@ -2,10 +2,14 @@ import { MapIcon, MapPinIcon, TruckIcon } from "@heroicons/react/24/outline";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
+import { DatePicker, Space } from "antd";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getDummyVehicle } from "../../../dummyInfo/DummyVehicles";
 import filteredVhicleByPlate from "../../../dummyInfo/FilterCarInfo";
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
+};
 
 // Define StyledBadge
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -69,7 +73,7 @@ export default function PreciseVehicle() {
                 <div className="flex">
                   <Avatar
                     alt={vehicleData.driver}
-                    src="/static/images/avatar/1.jpg" // Ensure the correct path to the avatar image
+                    src="/static/images/avatar/1.jpg"
                     sx={{ width: 32, height: 32 }}
                   />
                   {vehicleData.status === "active" ? (
@@ -130,13 +134,43 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
+
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs bg-white border-b rounded-lg shadow-md w-max">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 rounded-full bg-neutral-200">
+                  <MapIcon className="self-start w-8 h-8 text-blue-600" />
+                </div>
+                <span className="flex flex-col text-base capitalize">
+                  <span className="font-bold">
+                    {formatMileage(vehicleData.milage)}KM
+                  </span>
+                  <span className="text-xs">Mileage Covered Today</span>
+                </span>
+              </div>
+            </span>
           </div>
           <div className="flex space-x-3 w-max">
             <span className="p-4 text-sm font-bold bg-white rounded-lg shadow-md">
-              Total Milage graph
+              <div className="flex flex-col space-y-3">
+                <span>Distance Traveled Between </span>
+
+                <Space direction="horizontal">
+                  <label htmlFor="" className="flex flex-col">
+                    Start Date
+                    <DatePicker onChange={onChange} picker="Start Date" />
+                  </label>
+                  <label htmlFor="" className="flex flex-col ">
+                    End Date
+                    <DatePicker onChange={onChange} picker="End Date" />
+                  </label>
+                </Space>
+              </div>
             </span>
             <span className="p-4 text-sm font-bold bg-white rounded-lg shadow-md">
-              Custom Mileage
+              <div className="flex flex-col space-y-3">
+                <span>Graph</span>
+                <span>import graph</span>
+              </div>
             </span>
           </div>
           <div className="flex flex-col p-4 bg-white rounded-lg shadow-md w-max">
@@ -149,7 +183,7 @@ export default function PreciseVehicle() {
                   loading="lazy"
                   allowfullscreen
                   referrerpolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+                  src="https://www.google.com/maps/embed/v1/place?key=
     &q=Space+Needle,Seattle+WA"
                 ></iframe>
               </div>
