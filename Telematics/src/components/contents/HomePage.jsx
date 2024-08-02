@@ -2,16 +2,15 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 
 // sections
-import BrandName from "../brand/brandName";
+import NavBar from "../navbar/NavBar";
 import SideBar from "../sections/sidebar/sideBar";
 
 function HomePage() {
   return (
     <>
       <div className="flex flex-col w-full space-y-2 ">
-        <div>
-          <BrandName />
-        </div>
+        <NavBar />
+
         <div className="flex w-full space-x-1 ">
           <div className="flex flex-col items-start justify-between h-screen ">
             <SideBar />

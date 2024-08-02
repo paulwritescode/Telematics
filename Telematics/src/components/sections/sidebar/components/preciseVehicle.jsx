@@ -68,7 +68,7 @@ export default function PreciseVehicle() {
       {vehicleData ? (
         <div className="flex flex-col h-screen p-4 space-y-3">
           <div className="flex space-x-3">
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs bg-white border-b rounded-lg shadow-md w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
               <div className="flex items-center space-x-3">
                 <div className="flex">
                   <Avatar
@@ -86,7 +86,7 @@ export default function PreciseVehicle() {
                       variant="dot"
                     ></StyledBadge>
                   ) : (
-                    <p className="flex p-1 bg-red-500 rounded-full h-max w-max"></p>
+                    <p className="flex p-1 rounded-full bg-amber-500 h-max w-max"></p>
                   )}
                 </div>
                 <span className="flex flex-col text-base capitalize">
@@ -95,7 +95,7 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs bg-white border-b rounded-lg shadow-md w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
                   <TruckIcon className="self-start w-8 h-8 text-blue-600" />
@@ -106,7 +106,7 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs bg-white border-b rounded-lg shadow-md w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
                   <MapIcon className="self-start w-8 h-8 text-blue-600" />
@@ -119,7 +119,7 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs bg-white border-b rounded-lg shadow-md w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
                   <MapPinIcon className="self-start w-8 h-8 text-blue-600" />
@@ -135,7 +135,7 @@ export default function PreciseVehicle() {
               </div>
             </span>
 
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs bg-white border-b rounded-lg shadow-md w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
                   <MapIcon className="self-start w-8 h-8 text-blue-600" />
@@ -150,7 +150,7 @@ export default function PreciseVehicle() {
             </span>
           </div>
           <div className="flex space-x-3 w-max">
-            <span className="p-4 text-sm font-bold bg-white rounded-lg shadow-md">
+            <span className="p-4 text-sm font-bold rounded-lg shadow-md bg-white/5">
               <div className="flex flex-col space-y-3">
                 <span>Distance Traveled Between </span>
 
@@ -166,14 +166,14 @@ export default function PreciseVehicle() {
                 </Space>
               </div>
             </span>
-            <span className="p-4 text-sm font-bold bg-white rounded-lg shadow-md">
+            <span className="p-4 text-sm font-bold rounded-lg shadow-md bg-white/5">
               <div className="flex flex-col space-y-3">
                 <span>Graph</span>
                 <span>import graph</span>
               </div>
             </span>
           </div>
-          <div className="flex flex-col p-4 bg-white rounded-lg shadow-md w-max">
+          <div className="flex flex-col p-4 rounded-lg shadow-md bg-white/5 w-max">
             <span className="text-sm font-bold">
               Google map
               <div>

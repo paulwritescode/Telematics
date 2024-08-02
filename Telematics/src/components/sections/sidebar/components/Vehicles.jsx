@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon, TruckIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, TruckIcon } from "@heroicons/react/24/solid";
 import Badge from "@mui/material/Badge"; // Ensure Badge is imported
 import { styled } from "@mui/material/styles"; // Import styled from @mui/material/styles
 import React, { useState } from "react";
@@ -54,32 +54,32 @@ function Vehicles() {
 
   return (
     <>
-      <div className="flex w-full space-x-1 rounded-lg bg-white/40">
-        <div className=" p-4 w-[300px] rounded-md border   flex flex-col space-y-1">
-          <div className="flex items-center justify-between p-1 mb-2 rounded-3xl bg-neutral-200">
-            <MagnifyingGlassIcon className="w-5 h-5 ml-1 text-blue-600" />
+      <div className="flex w-full space-x-1 rounded-lg ">
+        <div className=" p-4 w-[300px] rounded-md text-sm flex flex-col space-y-1">
+          <div className="flex items-center justify-between p-1 mb-2 rounded-3xl bg-neutral-100">
+            <MagnifyingGlassIcon className="w-5 h-5 ml-1 text-sky-500" />
             <input
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search vehicle"
-              className="flex-1 ml-2 rounded-md bg-neutral-200 focus:outline-none"
+              className="flex-1 ml-2 rounded-md bg-neutral-100 focus:outline-none"
             />
           </div>
           {filteredVehicles.map((vehicle, index) => (
             <Link
               to={`precisevehicle/${vehicle.plate}`}
               key={vehicle.plate} // Unique key for each vehicle
-              className="flex px-2 py-2 space-x-2 text-sm border-b shadow-sm border-neutral-300 hover:bg-neutral-200"
+              className="flex px-2 py-2 space-x-2 text-sm rounded-lg bg-white/5 hover:bg-white/15"
             >
-              <span className="text-slate-500">{index + 1}</span>
+              <span className="">{index + 1}</span>
               <div className="flex space-x-3">
-                <div className="p-2 rounded-full bg-neutral-200">
-                  <TruckIcon className="self-start text-blue-600 w-7 h-7" />
+                <div className="p-2 rounded-full ">
+                  <TruckIcon className="self-start w-6 h-6 text-emerald-400 " />
                 </div>
 
                 <div>
-                  <span className="text-base font-bold text-slate-700">
+                  <span className="text-base font-bold ">
                     {formatMileage(vehicle.milage)}KM
                   </span>
                   <span className="flex space-x-2 text-xs text-slate-500">
@@ -95,7 +95,7 @@ function Vehicles() {
                           variant="dot"
                         ></StyledBadge>
                       ) : (
-                        <p className="flex p-1 bg-red-500 rounded-full item-center h-max w-max"></p>
+                        <p className="flex p-1 rounded-full bg-amber-500 item-center h-max w-max"></p>
                       )}
                     </span>
                   </span>
