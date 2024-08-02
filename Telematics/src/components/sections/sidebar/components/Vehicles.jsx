@@ -56,21 +56,21 @@ function Vehicles() {
     <>
       <div className="flex w-full space-x-1 rounded-lg ">
         <div className=" p-4 w-[300px] rounded-md text-sm flex flex-col space-y-1">
-          <div className="flex items-center justify-between p-1 mb-2 rounded-3xl bg-neutral-100">
+          <div className="flex items-center justify-between p-1 mb-2 text-black rounded-3xl bg-neutral-100">
             <MagnifyingGlassIcon className="w-5 h-5 ml-1 text-sky-500" />
             <input
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search vehicle"
-              className="flex-1 ml-2 rounded-md bg-neutral-100 focus:outline-none"
+              className="flex-1 ml-2 text-black rounded-md bg-neutral-100 focus:outline-none"
             />
           </div>
           {filteredVehicles.map((vehicle, index) => (
             <Link
               to={`precisevehicle/${vehicle.plate}`}
               key={vehicle.plate} // Unique key for each vehicle
-              className="flex px-2 py-2 space-x-2 text-sm rounded-lg bg-white/5 hover:bg-white/15"
+              className="flex px-2 py-2 space-x-2 text-sm rounded-sm bg-base-200 hover:bg-neutral-300"
             >
               <span className="">{index + 1}</span>
               <div className="flex space-x-3">

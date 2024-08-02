@@ -1,7 +1,8 @@
-import { MapIcon, MapPinIcon, TruckIcon } from "@heroicons/react/24/outline";
+import { MapIcon, MapPinIcon, TruckIcon } from "@heroicons/react/24/solid";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
+import { BarChart } from "@mui/x-charts/BarChart";
 import { DatePicker, Space } from "antd";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -10,6 +11,18 @@ import filteredVhicleByPlate from "../../../dummyInfo/FilterCarInfo";
 const onChange = (date, dateString) => {
   console.log(date, dateString);
 };
+
+const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
+const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
+const xLabels = [
+  "Page A",
+  "Page B",
+  "Page C",
+  "Page D",
+  "Page E",
+  "Page F",
+  "Page G",
+];
 
 // Define StyledBadge
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -66,9 +79,9 @@ export default function PreciseVehicle() {
   return (
     <>
       {vehicleData ? (
-        <div className="flex flex-col h-screen p-4 space-y-3">
+        <div className="flex flex-col p-4 space-y-3">
           <div className="flex space-x-3">
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-xl bg-base-200 w-max">
               <div className="flex items-center space-x-3">
                 <div className="flex">
                   <Avatar
@@ -95,10 +108,10 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-xl bg-base-200 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
-                  <TruckIcon className="self-start w-8 h-8 text-blue-600" />
+                  <TruckIcon className="self-start w-8 h-8 text-emerald-500" />
                 </div>
                 <span className="flex flex-col text-base capitalize">
                   <span className="font-bold">{vehicleData.plate}</span>
@@ -106,10 +119,10 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-xl bg-base-200 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
-                  <MapIcon className="self-start w-8 h-8 text-blue-600" />
+                  <MapIcon className="self-start w-8 h-8 text-purple-500" />
                 </div>
                 <span className="flex flex-col text-base capitalize">
                   <span className="font-bold">
@@ -119,10 +132,10 @@ export default function PreciseVehicle() {
                 </span>
               </div>
             </span>
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-xl bg-base-200 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
-                  <MapPinIcon className="self-start w-8 h-8 text-blue-600" />
+                  <MapPinIcon className="self-start w-8 h-8 text-cyan-500" />
                 </div>
                 <span className="flex flex-col text-base capitalize">
                   <span className="font-bold">
@@ -135,10 +148,10 @@ export default function PreciseVehicle() {
               </div>
             </span>
 
-            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-lg shadow-md bg-white/5 w-max">
+            <span className="flex flex-col justify-center px-5 py-4 space-y-3 text-xs rounded-xl bg-base-200 w-max">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-full bg-neutral-200">
-                  <MapIcon className="self-start w-8 h-8 text-blue-600" />
+                  <MapIcon className="self-start w-8 h-8 text-purple-500" />
                 </div>
                 <span className="flex flex-col text-base capitalize">
                   <span className="font-bold">
@@ -150,7 +163,7 @@ export default function PreciseVehicle() {
             </span>
           </div>
           <div className="flex space-x-3 w-max">
-            <span className="p-4 text-sm font-bold rounded-lg shadow-md bg-white/5">
+            <span className="p-4 text-sm font-bold rounded-xl bg-base-200">
               <div className="flex flex-col space-y-3">
                 <span>Distance Traveled Between </span>
 
@@ -166,14 +179,24 @@ export default function PreciseVehicle() {
                 </Space>
               </div>
             </span>
-            <span className="p-4 text-sm font-bold rounded-lg shadow-md bg-white/5">
+            <span className="p-4 text-sm font-bold rounded-xl bg-base-200">
               <div className="flex flex-col space-y-3">
                 <span>Graph</span>
-                <span>import graph</span>
+                <span>
+                  <BarChart
+                    width={500}
+                    height={300}
+                    series={[
+                      { data: pData, label: "pv", id: "pvId" },
+                      { data: uData, label: "uv", id: "uvId" },
+                    ]}
+                    xAxis={[{ data: xLabels, scaleType: "band" }]}
+                  />
+                </span>
               </div>
             </span>
           </div>
-          <div className="flex flex-col p-4 rounded-lg shadow-md bg-white/5 w-max">
+          <div className="flex flex-col p-4 rounded-xl bg-base-200 w-max">
             <span className="text-sm font-bold">
               Google map
               <div>

@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.5",
     "@heroicons/react": "^2.1.3",
     "@mui/material": "^5.15.20",
+    "@mui/x-charts": "^7.12.0",
     "DatePicker": "^2.0.0",
     "antd": "^5.19.1",
     "react": "^18.2.0",
