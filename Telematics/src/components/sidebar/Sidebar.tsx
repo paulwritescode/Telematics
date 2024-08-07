@@ -1,3 +1,8 @@
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
 import { Bus, LayoutDashboard, PieChart, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,15 +16,21 @@ function SideBar() {
   return (
     <>
       <div className="flex">
-        <div className="flex flex-col md:hidden">
+        <div className="flex justify-center w-full gap-10 mb-4 md:hidden">
           {navs.map((nav, index) => (
-            <Link
-              key={index}
-              className="flex items-center gap-5 my-2"
-              to={nav.linkto}
-            >
-              <nav.icon />
-            </Link>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <Link
+                    key={index}
+                    className="flex items-center gap-5 my-2"
+                    to={nav.linkto}
+                  >
+                    <nav.icon className="w-7 h-7" />
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           ))}
         </div>
         <div className="flex-col hidden transition ease-in-out delay-300 duration-900 md:flex">

@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@/components/theme-provider";
-
 import { Outlet } from "react-router-dom";
 import "../app/globals.css";
 import Navbar from "./components/navbar/Navbar";
@@ -12,7 +11,7 @@ function App() {
       <>
         <main className="min-h-screen p-4 ">
           <Navbar />
-          <section className="flex gap-10 mt-3 ">
+          <section className="mt-3  md:flex">
             <SideBar />
             <Outlet />
           </section>
