@@ -1,12 +1,17 @@
 import Logo from "../logo/Logo";
-import { ModeToggle } from "../mode-toggle";
+import NavMobile from "../mobile/NavMobile";
+import UserDock from "../userdock/UserDock";
 
 function Navbar() {
   return (
     <>
-      <div className="flex gap-3">
+      <div className="flex items-baseline justify-between w-full ">
         <Logo />
-        <ModeToggle />
+
+        <div>
+          <UserDock hiddenclass="hidden md:flex " />
+          <NavMobile hiddenclass="md:hidden" />
+        </div>
       </div>
     </>
   );
