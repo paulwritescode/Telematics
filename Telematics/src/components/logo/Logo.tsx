@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 function Logo() {
   return (
     <>
-      <div className="text-2xl font-bold">Fleet</div>
+      <Link to={"/"} className="text-2xl font-bold">
+        Fleet
+      </Link>
     </>
   );
 }
