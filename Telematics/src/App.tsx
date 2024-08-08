@@ -5,7 +5,6 @@ import Navbar from "./components/navbar/Navbar";
 import SideBar from "./components/sidebar/Sidebar";
 
 function App() {
-  console.log("I am here");
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <>
