@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Bus, LayoutDashboard, PieChart, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import NavFloat from "./NavFloat";
 
 function SideBar() {
   const navs = [
@@ -16,17 +17,18 @@ function SideBar() {
   return (
     <>
       <div className="flex">
-        <div className="flex justify-center w-full gap-10 mb-4 md:hidden">
+        <NavFloat />
+        <div className="flex justify-center w-full gap-10 mb-4 border-b md:hidden">
           {navs.map((nav, index) => (
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
+                <NavigationMenuItem className="">
                   <Link
                     key={index}
-                    className="flex items-center gap-5 my-2"
+                    className="flex items-center gap-4 my-2 "
                     to={nav.linkto}
                   >
-                    <nav.icon className="w-7 h-7" />
+                    <nav.icon className="w-5 h-5" />
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>

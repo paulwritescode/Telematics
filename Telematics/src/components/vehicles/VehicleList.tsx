@@ -8,12 +8,15 @@ function VehicleList() {
     <>
       {vehicle.map((driver, index) => (
         <Link
-          className={`flex gap-2 py-1 mb-1 rounded-md px-1 ${
-            driver.status === "active" ? "bg-emerald-500" : "bg-destructive"
+          className={`flex gap-2 py-1 mb-1 rounded-sm px-1 ${
+            driver.status === "active"
+              ? "bg-emerald-500/50"
+              : "bg-destructive/50"
           }`}
           to={`${driver.plate}`}
           key={driver.plate}
         >
+          <input type="checkbox" />
           <span>{index + 1}</span>
           <span className="flex flex-col space-y-1">
             <span className="font-medium test-base ">{driver.milage}</span>
