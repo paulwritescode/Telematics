@@ -1,5 +1,6 @@
 import { DummyData } from "@/services/DummyData";
 import { Link } from "react-router-dom";
+import MoreDetails from "./MoreDetails";
 
 function VehicleList() {
   const vehicle = DummyData();
@@ -19,6 +20,9 @@ function VehicleList() {
             <span className="text-xs ">{driver.plate}</span>
           </span>
           <span className="text-xs text-left">{driver.status}</span>
+          <div className="flex md:hidden">
+            <MoreDetails />
+          </div>
         </Link>
       ))}
     </>

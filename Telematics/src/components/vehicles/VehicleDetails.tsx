@@ -17,6 +17,7 @@ function VehicleDetails() {
           content={vehicleDetails?.milage}
           footer={vehicleDetails?.status}
         />
+
         <VehicleCard
           cardTitle="Driver Details"
           title={vehicleDetails?.driver}

@@ -19,7 +19,7 @@ function DriverTable() {
         <TableHeader>
           <TableRow>
             <TableHead></TableHead>
-            <TableHead className="">Driver</TableHead>
+            <TableHead className="w-[100px]">Driver</TableHead>
             <TableHead>Telephone </TableHead>
 
             <TableHead className="text-right">Status</TableHead>

@@ -7,6 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { FileSymlink } from "lucide-react";
+import VehicleCard from "./VehicleCard";
 
 function MoreDetails({ name, plate, model, milage }: any) {
   return (
@@ -20,9 +21,32 @@ function MoreDetails({ name, plate, model, milage }: any) {
           <DialogHeader>
             <DialogTitle className="Uppercase "> {plate}</DialogTitle>
             <DialogDescription className="flex flex-col items-start">
-              <span>Driver: {name}</span>
-              <span>Model: {model}</span>
-              <span>Milage: {milage}</span>
+              <div className="flex flex-wrap justify-center gap-4">
+                <VehicleCard
+                  cardTitle="Driver Details"
+                  title={name}
+                  description={model}
+                  content={milage}
+                />
+                <VehicleCard
+                  cardTitle="Car Details"
+                  title={name}
+                  description={model}
+                  content={milage}
+                />
+                <VehicleCard
+                  cardTitle="Data Graph"
+                  title={name}
+                  description={model}
+                  content={milage}
+                />
+                <VehicleCard
+                  cardTitle="Input Query"
+                  title={name}
+                  description={model}
+                  content={milage}
+                />
+              </div>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
