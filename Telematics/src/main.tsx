@@ -7,7 +7,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import "../app/globals.css";
+import "../src/globals.css";
 import App from "./App";
 import Dashboard from "./components/dashboard/Dashboard";
 import Drivers from "./components/drivers/Drivers";
