@@ -4,7 +4,7 @@ import VehicleList from "./VehicleList";
 function Vehicle() {
   return (
     <>
-      <div className="p-4 md:flex">
+      <div className="gap-2 p-4 md:flex">
         <div>
           <VehicleList />
         </div>
