@@ -1,8 +1,3 @@
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 import { Bus, LayoutDashboard, PieChart, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import NavFloat from "./NavFloat";
@@ -18,7 +13,7 @@ function SideBar() {
     <>
       <div className="flex">
         <NavFloat />
-        <div className="flex justify-center w-full gap-10 mb-4 border-b md:hidden">
+        {/* <div className="flex justify-center w-full gap-10 mb-4 border-b md:hidden">
           {navs.map((nav, index) => (
             <NavigationMenu>
               <NavigationMenuList>
@@ -34,7 +29,7 @@ function SideBar() {
               </NavigationMenuList>
             </NavigationMenu>
           ))}
-        </div>
+        </div> */}
         <div className="flex-col hidden transition ease-in-out delay-300 duration-900 md:flex">
           {navs.map((nav, index) => (
             <Link

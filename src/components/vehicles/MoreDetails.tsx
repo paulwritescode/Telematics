@@ -13,9 +13,9 @@ function MoreDetails({ name, plate, model, milage }: any) {
   return (
     <>
       <Dialog>
-        <DialogTrigger className="flex items-center gap-1">
-          <FileSymlink className="w-4 h-4" />
-          details
+        <DialogTrigger className="flex items-center gap-1 text-sm text-emerald-500">
+          <FileSymlink className="w-4 h-4 " />
+          details...
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

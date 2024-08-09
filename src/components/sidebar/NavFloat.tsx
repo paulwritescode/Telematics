@@ -28,7 +28,7 @@ function NavFloat() {
   ];
   return (
     <>
-      <FloatingNav className="bg-red-400" navItems={nav} />
+      <FloatingNav className="" navItems={nav} />
     </>
   );
 }

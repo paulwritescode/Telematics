@@ -19,17 +19,17 @@ function VehicleDetails() {
         />
 
         <VehicleCard
-          cardTitle="Driver Details"
-          title={vehicleDetails?.driver}
+          cardTitle="Vehicle Details"
+          title={vehicleDetails?.plate}
           description={vehicleDetails?.plate}
           content={vehicleDetails?.milage}
           footer={vehicleDetails?.status}
         />
         <VehicleCard
-          cardTitle="Driver Details"
-          title={vehicleDetails?.driver}
+          cardTitle="Destination Details"
+          title={vehicleDetails?.destination_to}
           description={vehicleDetails?.plate}
-          content={vehicleDetails?.milage}
+          content={vehicleDetails?.destination_from}
           footer={vehicleDetails?.status}
         />
         <VehicleCard
