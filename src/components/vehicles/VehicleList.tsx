@@ -1,5 +1,5 @@
 import { DummyData } from "@/services/DummyData";
-import { Power, PowerOff } from "lucide-react";
+import { BusFront, Power, PowerOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import MoreDetails from "./MoreDetails";
 
@@ -16,8 +16,11 @@ function VehicleList() {
           key={driver.plate}
         >
           <div className="flex justify-between w-full pr-1">
-            <span className="flex space-x-3">
+            <span className="flex items-center space-x-3">
               <span>{index + 1}</span>
+              <span className="p-2 rounded-full bg-slate-400/30">
+                <BusFront className="w-4 h-4 text-neutral-600 dark:text-white" />
+              </span>
               <span className="flex flex-col space-y-1">
                 <span className="flex items-center font-medium test-base">
                   {driver.milage} KM
