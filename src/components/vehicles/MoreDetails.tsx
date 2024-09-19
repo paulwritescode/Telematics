@@ -27,7 +27,8 @@ function MoreDetails({ name, plate, model, milage }: any) {
                   title={name}
                   description={model}
                   content={milage}
-                />
+                />  
+               //this here is the card component 
                 <VehicleCard
                   cardTitle="Car Details"
                   title={name}

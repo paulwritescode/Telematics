@@ -8,9 +8,9 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <>
-        <main className="min-h-screen p-4 md:px-10 ">
+        <main className="min-h-screen p-4 md:p-0 md:mx-12">
           <Navbar />
-          <section className="mt-10 md:flex">
+          <section className="gap-10 mt-10 md:flex">
             <SideBar />
             <Outlet />
           </section>

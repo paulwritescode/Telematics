@@ -1,46 +1,45 @@
 import { Bus, LayoutDashboard, PieChart, Users } from "lucide-react";
-import { Link } from "react-router-dom";
-import NavFloat from "./NavFloat";
+import { Link, useLocation } from "react-router-dom";
 
 function SideBar() {
+  const location = useLocation();
   const navs = [
     { name: "Dashboard", icon: LayoutDashboard, linkto: "dashboard" },
     { name: "Vehicles", icon: Bus, linkto: "vehicles" },
     { name: "Drivers", icon: Users, linkto: "drivers" },
-    { name: "Summeries", icon: PieChart, linkto: "summery" },
+    { name: "Summaries", icon: PieChart, linkto: "summery" },
   ];
+
   return (
     <>
-      <div className="flex">
-        <NavFloat />
-        {/* <div className="flex justify-center w-full gap-10 mb-4 border-b md:hidden">
-          {navs.map((nav, index) => (
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem className="">
-                  <Link
-                    key={index}
-                    className="flex items-center gap-4 my-2 "
-                    to={nav.linkto}
-                  >
-                    <nav.icon className="w-5 h-5" />
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          ))}
-        </div> */}
-        <div className="flex-col hidden transition ease-in-out delay-300 duration-900 md:flex">
-          {navs.map((nav, index) => (
-            <Link
-              to={nav.linkto}
-              key={index}
-              className="flex items-center gap-5 my-2"
-            >
-              <nav.icon />
-              {nav.name}
-            </Link>
-          ))}
+      <div className="sticky flex px-4 top-28 h-max">
+        {/* <NavFloat /> */}
+        <div className="flex-col hidden transition ease-in-out delay-300 duration-900 md:flex ">
+          {navs.map((nav, index) => {
+            // Check if the current link is active
+            const isActive = location.pathname.includes(nav.linkto);
+
+            return (
+              <Link
+                to={nav.linkto}
+                key={index}
+                className={`flex items-center gap-5 my-2 group  ${
+                  isActive
+                    ? "text-purple-400" // Active link styles
+                    : "" // Hover effect on non-active links
+                }`}
+              >
+                <nav.icon
+                  className={`w-5 h-5 ${
+                    isActive
+                      ? "text-purple-400"
+                      : "group-hover:text-emerald-300"
+                  }`}
+                />
+                {nav.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>
